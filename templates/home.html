@@ -1,0 +1,14 @@
+{% extends 'base_template.html' %}
+
+{% block title %}
+My Application
+{% endblock %}
+
+{%block content%}
+<h1>My Django Bushit Home</h1>
+<a href="{% url 'post-create-view' %}">Create Task</a>
+{% for polls in post_list %}
+<div>{{ polls.title }}</div>
+<div>{{ polls.description }}</div>
+{% endfor %}
+{%endblock%}  
